@@ -1,0 +1,11 @@
+services:
+  web:
+    build:
+        context: .
+        dockerfile: Dockerfile
+    image : nodejs
+    ports:
+    - "80:80"       # Node.js web interface
+    volumes:
+      - ./server.js:/app/server.js
+    container_name: web_node
